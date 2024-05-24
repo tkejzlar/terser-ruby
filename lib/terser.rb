@@ -47,10 +47,10 @@ class Terser
       :keep_quoted_props => false # Keep quotes property names
     },
     :mangle => {
-      :eval => true, # Mangle names when eval of when is used in scope
+      :eval => false, # Mangle names when eval of when is used in scope
       :reserved => ["$super"], # Argument names to be excluded from mangling
-      :properties => true, # Mangle property names
-      :toplevel => true # Mangle names declared in the toplevel scope
+      :properties => false, # Mangle property names
+      :toplevel => false # Mangle names declared in the toplevel scope
     }, # Mangle variable and function names, set to false to skip mangling
     :compress => {
       :sequences => true, # Allow statements to be joined by commas
